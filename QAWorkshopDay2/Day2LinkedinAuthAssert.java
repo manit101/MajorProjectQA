@@ -1,9 +1,8 @@
-package polarisweb;
+package polarisweb.QAWorkshopDay2;
 
-import java.time.Duration;
+
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,21 +28,21 @@ public class Day2LinkedinAuthAssert {
 		driver.get("https://www.linkedin.com/");
 		Thread.sleep(2000);
 		
-		WebElement signupPageXPath = driver.findElement(By.xpath("//a[@class=\"sign-in-form__sign-in-cta my-2 py-1 btn-md btn-secondary block min-h-[40px] babybear:w-full\"]"));
-		signupPageXPath.click();
+		WebElement signupPage = driver.findElement(By.xpath("//a[@class=\"sign-in-form__sign-in-cta my-2 py-1 btn-md btn-secondary block min-h-[40px] babybear:w-full\"]"));
+		signupPage.click();
 		Thread.sleep(2000);
 		
-		WebElement emailInputXPath = driver.findElement(By.id("username"));
-		emailInputXPath.sendKeys("yourMail");
+		WebElement emailInput = driver.findElement(By.id("username"));
+		emailInput.sendKeys("yourMail");
 		
-		WebElement passInputXPath = driver.findElement(By.id("password"));
-		passInputXPath.sendKeys("yourPass");
+		WebElement passInput = driver.findElement(By.id("password"));
+		passInput.sendKeys("yourPass");
 		
-		WebElement signBtnXPath = driver.findElement(By.xpath("//button[@class=\"btn__primary--large from__button--floating\"]"));
-		signBtnXPath.click();
+		WebElement signBtn = driver.findElement(By.xpath("//button[@class=\"btn__primary--large from__button--floating\"]"));
+		signBtn.click();
 		
-		WebElement profilePicXPath = driver.findElement(By.xpath("//img[@class=\"profile-card-profile-picture evi-image lazy-image ember-view\"]"));
-		profilePicXPath.click();
+		WebElement profilePic = driver.findElement(By.xpath("//img[@class=\"profile-card-profile-picture evi-image lazy-image ember-view\"]"));
+		profilePic.click();
 		Thread.sleep(5000);
 
 	}

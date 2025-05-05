@@ -1,4 +1,4 @@
-package polarisweb;
+package polarisweb.QAWorkshopDay1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,29 +23,29 @@ public class Day1WrongAuthAssertion {
 	
 	@Test (priority = 2)
 	public void wrongLogIn() throws InterruptedException {
-		WebElement signupBtnXPath = driver.findElement(By.xpath("//a[@class=\"interactive-profile-element profile-link\"]"));
-		signupBtnXPath.click();
+		WebElement signupBtn = driver.findElement(By.xpath("//a[@class=\"interactive-profile-element profile-link\"]"));
+		signupBtn.click();
 		
-		WebElement emailBoxXPath = driver.findElement(By.xpath("//input[@id=\"username\"]"));
-		emailBoxXPath.sendKeys("dapac62803@cyluna.com");
+		WebElement emailBox = driver.findElement(By.xpath("//input[@id=\"username\"]"));
+		emailBox.sendKeys("dapac62803@cyluna.com");
 		
 		Thread.sleep(2000);
 		
-		WebElement continueBtnXPath = driver.findElement(By.xpath("//button[@class=\"nds-btn css-hj7pkf btn-primary-dark  btn-md\"]"));
-		continueBtnXPath.click();
+		WebElement continueBtn = driver.findElement(By.xpath("//button[@class=\"nds-btn css-hj7pkf btn-primary-dark  btn-md\"]"));
+		continueBtn.click();
 		
 		Thread.sleep(5000);
 		
-		WebElement passInputXPath = driver.findElement(By.xpath("//input[@name=\"password\"]"));
-		passInputXPath.sendKeys("passInputXPath");
+		WebElement passInput = driver.findElement(By.xpath("//input[@name=\"password\"]"));
+		passInput.sendKeys("passInputXPath");
 		
 		Thread.sleep(2000);
 		System.out.println("Hello");
 		
-		WebElement invalidIdXPath = driver.findElement(By.xpath("(//div[@class=\"css-xkocxm\"]//div)[2]"));
-		System.out.println(invalidIdXPath.getText());
+		WebElement invalidId = driver.findElement(By.xpath("(//div[@class=\"css-xkocxm\"]//div)[2]"));
+		System.out.println(invalidId.getText());
 		
-		Assert.assertEquals(invalidIdXPath.getText(), "Your credentials are invalid");
+		Assert.assertEquals(invalidId.getText(), "Your credentials are invalid");
 	}
 	
 	@Test (priority = 3)

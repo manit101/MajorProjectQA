@@ -1,4 +1,5 @@
-package polarisweb;
+package polarisweb.QAWorkshopDay1;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,14 +23,14 @@ public class Day1NikeXPath {
 	
 	@Test (priority = 2)
 	public void searchXPath() {
-		WebElement womenShoesXPath = driver.findElement(By.xpath("(//div[text()=\"Women's Shoes\"])[2]"));
-		WebElement shortsFilterXPath = driver.findElement(By.xpath("//a[@href=\"https://www.nike.com/in/w/new-shorts-38fphz3n82y\"]"));
-		WebElement hideFiltersXPath = driver.findElement(By.xpath("//span[@class=\"filters-btn__filter_text\"]"));
-		WebElement SnkrsXPath = driver.findElement(By.xpath("(//div //a[@class=\"menu-hover-trigger-link\"])[5]")); // lik this we can write xpath after an xpath
+		WebElement womenShoe = driver.findElement(By.xpath("(//div[text()=\"Women's Shoes\"])[2]"));
+		WebElement shortsFilter = driver.findElement(By.xpath("//a[@href=\"https://www.nike.com/in/w/new-shorts-38fphz3n82y\"]"));
+		WebElement hideFilters = driver.findElement(By.xpath("//span[@class=\"filters-btn__filter_text\"]"));
+		WebElement snkrs = driver.findElement(By.xpath("(//div //a[@class=\"menu-hover-trigger-link\"])[5]")); // lik this we can write xpath after an xpath
 		
-		womenShoesXPath.click();
-		shortsFilterXPath.click();
-		hideFiltersXPath.click();
-		SnkrsXPath.click();
+		womenShoe.click();
+		shortsFilter.click();
+		hideFilters.click();
+		snkrs.click();
 	}
 }
