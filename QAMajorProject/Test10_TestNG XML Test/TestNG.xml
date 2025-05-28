@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AutomationSuite" parallel="tests" thread-count="2">
+    <parameter name="browser" value="Chrome"/>
+    <test name="Regression Test">
+        <classes>
+            <class name="Test10_TestNGxml"/>
+        </classes>
+    </test>
+</suite>

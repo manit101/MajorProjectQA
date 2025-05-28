@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="W3Schools Test Suite">
+    <listeners>
+        <listener class-name="TestListener"/>
+    </listeners>
+
+    <test name="Verify W3Schools Homepage">
+        <classes>
+            <class name="W3SchoolsTest"/>
+        </classes>
+    </test>
+</suite>
